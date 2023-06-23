@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* custom CSS for chat box */
+.react-chatbot-kit-chat-container {
+  height: 100%;
+  width: 100%;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh
+}
+
+
+.react-chatbot-kit-chat-message-container {
+  flex-grow: 1;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 0;
+}
