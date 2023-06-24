@@ -17,7 +17,6 @@ function AgeDropDown(props) {
 
   return (
     <form>
-      <div>{age}</div>
       <select
         className="ms-12 w-48 p-1 outline-none "
         onChange={(e) => {

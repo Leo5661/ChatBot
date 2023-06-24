@@ -15,9 +15,13 @@ export const studentSlice = createSlice({
     addAge: (state, action) => {
       state.studentAge = action.payload;
     },
+    resetStore: (state) => {
+      state.studentName = "";
+      state.studentAge = "";
+    },
   },
 });
 
-export const { addName, addAge } = studentSlice.actions;
+export const { addName, addAge, resetStore } = studentSlice.actions;
 
 export default studentSlice.reducer;
