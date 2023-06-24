@@ -7,7 +7,7 @@ import store from "./redux/store.js";
 
 function App() {
   return (
-    <div className="app h-screen w-full bg-red-700 sm:w-72">
+    <div className="app h-screen w-full bg-red-700 sm:w-96">
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
