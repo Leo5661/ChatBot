@@ -10,7 +10,7 @@ const botName = "Student Info Bot";
 
 const config = {
   initialMessages: [
-    createChatBotMessage("Hello Welcome to student info system", {
+    createChatBotMessage("Hello, Welcome to student info system", {
       widget: "greetOptionBtn",
     }),
   ],
@@ -19,6 +19,10 @@ const config = {
     botMessageBox: {
       backgroundColor: "#4994da",
     },
+  },
+  state: {
+    showNameInput: true,
+    showAgeInput: true,
   },
   customComponents: {
     botAvatar: (props) => <BotAvatar {...props} />,
@@ -32,10 +36,12 @@ const config = {
     {
       widgetName: "nameInput",
       widgetFunc: (props) => <NameInput {...props} />,
+      mapStateToProps: ["showNameInput"],
     },
     {
       widgetName: "ageInput",
       widgetFunc: (props) => <AgeDropDown {...props} />,
+      mapStateToProps: ["showAgeInput"],
     },
   ],
 };
