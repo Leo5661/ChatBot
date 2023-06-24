@@ -1,7 +1,10 @@
 import React from "react";
 import { createClientMessage } from "react-chatbot-kit";
+import { useNavigate } from "react-router-dom";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+  const navigate = useNavigate();
+
   const handelGreet = () => {
     const clientMessage = createClientMessage("Got it!", {
       delay: 2000,
@@ -40,13 +43,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handelAge = (text) => {
-    const clientMessage = createClientMessage(text, {
-      delay: 5000,
-    });
+    const clientMessage = createClientMessage(text);
     addMessageToState(clientMessage);
 
-    const message = createChatBotMessage("You are added");
-    addMessageToState(message);
+    setTimeout(() => {
+      navigate("/details");
+    }, 5000);
   };
 
   const addMessageToState = (message) => {

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   studentName: "",
-  studentAge: 0,
+  studentAge: "",
 };
 
 export const studentSlice = createSlice({
