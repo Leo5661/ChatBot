@@ -7,7 +7,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       delay: 2000,
     });
     addMessageToState(clientMessage);
-    const message = createChatBotMessage("Enter your name.");
+    const message = createChatBotMessage("Enter your name.", {
+      widget: "nameInput",
+    });
     addMessageToState(message);
   };
 
@@ -25,6 +27,28 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     addMessageToState(message);
   };
 
+  const handelInput = (text) => {
+    const clientMessage = createClientMessage(text, {
+      delay: 1000,
+    });
+    addMessageToState(clientMessage);
+
+    const message = createChatBotMessage("Enter your age", {
+      widget: "ageInput",
+    });
+    addMessageToState(message);
+  };
+
+  const handelAge = (text) => {
+    const clientMessage = createClientMessage(text, {
+      delay: 5000,
+    });
+    addMessageToState(clientMessage);
+
+    const message = createChatBotMessage("You are added");
+    addMessageToState(message);
+  };
+
   const addMessageToState = (message) => {
     setState((prevState) => ({
       ...prevState,
@@ -39,6 +63,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handelGreet,
             handelCancel,
+            handelInput,
+            handelAge,
           },
         });
       })}

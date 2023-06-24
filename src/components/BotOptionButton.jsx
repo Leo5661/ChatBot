@@ -15,7 +15,7 @@ function BotOptionButton(props) {
   const buttons = options.map((option) => (
     <button
       key={option.id}
-      className="rounded-md border border-blue-700 bg-transparent px-4 py-2 text-black"
+      className="rounded border border-blue-700 bg-transparent px-3 py-1 text-base text-gray-700"
       onClick={option.handler}
     >
       {option.text}

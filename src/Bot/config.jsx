@@ -3,6 +3,8 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import BotAvatar from "../components/BotAvatar";
 import BotOptionButton from "../components/BotOptionButton";
 import UserAvatar from "../components/UserAvatar";
+import NameInput from "../components/NameInput";
+import AgeDropDown from "../components/AgeDropDown";
 
 const botName = "Student Info Bot";
 
@@ -26,6 +28,14 @@ const config = {
     {
       widgetName: "greetOptionBtn",
       widgetFunc: (props) => <BotOptionButton {...props} />,
+    },
+    {
+      widgetName: "nameInput",
+      widgetFunc: (props) => <NameInput {...props} />,
+    },
+    {
+      widgetName: "ageInput",
+      widgetFunc: (props) => <AgeDropDown {...props} />,
     },
   ],
 };

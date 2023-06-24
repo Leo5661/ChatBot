@@ -1,5 +1,3 @@
-import React from "react";
-
 function UserAvatar() {
   return (
     <div className="bot_avatar_container ml-3 flex h-9 w-9 items-center justify-center rounded-full bg-gray-300">
