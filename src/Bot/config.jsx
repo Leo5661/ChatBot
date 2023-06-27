@@ -20,10 +20,10 @@ const config = {
       backgroundColor: "#4994da",
     },
   },
-  state: {
-    showNameInput: true,
-    showAgeInput: true,
-  },
+  // state: {
+  //   showNameInput: true,
+  //   showAgeInput: true,
+  // },
   customComponents: {
     botAvatar: (props) => <BotAvatar {...props} />,
     userAvatar: (props) => <UserAvatar {...props} />,
